@@ -20,11 +20,11 @@ class TailwindExtractor {
  |
  */
 
-mix
-  .js("resources/assets/js/app.js", "public/js")
-  .postCss("resources/assets/css/main.css", "public/css", [
-    tailwindcss("tailwind.js")
-  ]);
+// mix
+//   .js("resources/assets/js/app.js", "public/js")
+//   .postCss("resources/assets/css/main.css", "public/css", [
+//     tailwindcss("tailwind.js")
+//   ]);
 
 // If you want to use LESS for your preprocessing
 // mix.less('resources/assets/less/main.less', 'public/css')
@@ -35,11 +35,11 @@ mix
 //   })
 
 // If you want to use SASS for preprocessing
-// mix.sass('resources/assets/sass/app.scss', 'public/css')
-//    .options({
-//       processCssUrls: false,
-//       postCss: [ tailwindcss('tailwind.js') ],
-//    });
+mix.sass('resources/assets/sass/main.scss', 'public/css')
+   .options({
+      processCssUrls: false,
+      postCss: [ tailwindcss('tailwind.js') ],
+   });
 
 // PurgeCSS is a utility that parses your application view files, identifies which
 // utility classes are actually being used, removing unused classes. This means

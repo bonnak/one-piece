@@ -11,9 +11,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
-<body class="bg-brand-lightest h-screen">
+<body class="bg-grey-lighter h-screen">
     <div id="app">
         <nav class="bg-white h-12 shadow mb-8">
             <div class="container mx-auto h-full">

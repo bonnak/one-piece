@@ -16,7 +16,7 @@
 </head>
 <body class="bg-grey-lighter h-screen">
     <div id="app">
-        <nav class="bg-white h-12 shadow mb-8">
+        <nav class="bg-white h-12 shadow mb-4">
             <div class="container mx-auto h-full">
                 <div class="flex items-center justify-center h-12">
                     <div class="mr-6">
@@ -43,8 +43,18 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row -mx-2">
+                <div class="w-full lg:w-2/3 px-2">
+                    @yield('content')
+                </div>
+                <div class="w-full lg:w-1/3 px-2 mt-4 lg:mt-0">
+                    <div class="bg-white rounded shadow p-4">
+                        Sidebar
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->

@@ -16,32 +16,9 @@
 </head>
 <body class="bg-grey-lighter h-screen">
     <div id="app">
-        <nav class="bg-white h-12 shadow mb-4">
-            <div class="container mx-auto h-full">
-                <div class="flex items-center justify-center h-12">
-                    <div class="mr-6">
-                        <a href="{{ url('/') }}" class="no-underline">
-                            {{ config('app.name', 'Laravel') }}
-                        </a>
-                    </div>
-                    <div class="flex-1 text-right">
-                        @guest
-                            <a class="no-underline hover:underline text-grey-darker pr-3 text-sm" href="{{ url('/login') }}">Login</a>
-                            <a class="no-underline hover:underline text-grey-darker text-sm" href="{{ url('/register') }}">Register</a>
-                        @else
-                            <span class="text-grey-darker text-sm pr-4">{{ Auth::user()->name }}</span>
-
-                            <a href="{{ route('logout') }}"
-                                class="no-underline hover:underline text-grey-darker text-sm"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">Logout</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        @endguest
-                    </div>
-                </div>
-            </div>
+        <nav class="bg-white shadow mb-4">
+            @include('_partials.header')
+            @include('_partials.navigation')
         </nav>
         <div class="container mx-auto">
             <div class="flex flex-col lg:flex-row -mx-2">
@@ -49,11 +26,11 @@
                     @yield('content')
                 </div>
                 <div class="w-full lg:w-1/3 px-2 mt-4 lg:mt-0">
-                    <div class="bg-white rounded shadow p-4">
-                        Sidebar
-                    </div>
+                    @include('sidebar')
                 </div>
             </div>
+        </div>
+        <div class="bg-white h-12 mt-4 shadow">
         </div>
     </div>
 

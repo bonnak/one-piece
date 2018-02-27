@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 @import "components/player";
+
+.hover-shadow:hover {
+    @apply .shadow; 
+}

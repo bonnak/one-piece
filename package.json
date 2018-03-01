@@ -19,5 +19,8 @@
         "purgecss-webpack-plugin": "*",
         "tailwindcss": "^0.4.0",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "vue-carousel": "^0.6.9"
     }
 }

@@ -1,5 +1,5 @@
 @if ($paginator->hasPages())
-    <ul class="flex list-reset border border-grey-light rounded w-auto">
+    <ul class="bg-white flex list-reset border border-grey-light rounded w-auto">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
             <li class="page-item disabled"><span class="block text-grey-dark border-r border-grey-light px-3 py-2">&laquo;</span></li>

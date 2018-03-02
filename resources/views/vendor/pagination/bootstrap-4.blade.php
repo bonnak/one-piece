@@ -4,7 +4,7 @@
         @if ($paginator->onFirstPage())
             <li class="page-item disabled"><span class="block text-grey-dark border-r border-grey-light px-3 py-2">&laquo;</span></li>
         @else
-            <li class="page-item"><a class="block hover:text-white hover:bg-pink text-pink border-r border-grey-light px-3 py-2 no-underline" href="{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+            <li class="page-item"><a class="block hover:text-white hover:bg-blue text-blue border-r border-grey-light px-3 py-2 no-underline" href="{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></li>
         @endif
 
         {{-- Pagination Elements --}}
@@ -20,7 +20,7 @@
                     @if ($page == $paginator->currentPage())
                         <li class="page-item active"><span class="block text-grey-dark border-r border-grey-light px-3 py-2">{{ $page }}</span></li>
                     @else
-                        <li class="page-item"><a class="block hover:text-white hover:bg-pink text-pink border-r border-grey-light px-3 py-2 no-underline" href="{{ $url }}">{{ $page }}</a></li>
+                        <li class="page-item"><a class="block hover:text-white hover:bg-blue text-blue border-r border-grey-light px-3 py-2 no-underline" href="{{ $url }}">{{ $page }}</a></li>
                     @endif
                 @endforeach
             @endif
@@ -28,7 +28,7 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li class="page-item"><a class="block hover:text-white hover:bg-pink text-pink border-r border-grey-light px-3 py-2 no-underline" href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
+            <li class="page-item"><a class="block hover:text-white hover:bg-blue text-blue border-r border-grey-light px-3 py-2 no-underline" href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
         @else
             <li class="page-item disabled"><span class="block text-grey-dark border-r border-grey-light px-3 py-2">&raquo;</span></li>
         @endif

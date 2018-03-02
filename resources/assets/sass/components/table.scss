@@ -1,0 +1,18 @@
+.table {
+    @apply .w-full .max-w-full;
+    border-collapse: collapse;
+
+    td, th {
+        @apply .p-3 .border-grey-light .border-t .align-top .text-left;
+    }
+
+    thead {
+        th {
+            @apply .border-grey-light .border-b .border-b-2 .align-bottom .text-grey-dark .font-normal;
+        }
+    }
+
+    &__hover tbody tr:hover {
+        background-color: rgba(0,0,0,.075);
+    }
+}

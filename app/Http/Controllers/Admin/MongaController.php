@@ -28,4 +28,11 @@ class MongaController extends Controller
     {
         return view('admin.monga-create');
     }
+
+    public function destroy($id)
+    {
+        Monga::where('id', $id)->delete();
+
+        return redirect()->back();
+    }
 }

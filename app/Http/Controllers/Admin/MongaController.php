@@ -11,7 +11,7 @@ class MongaController extends Controller
 {
     public function index()
     {
-        $mongas = Monga::with('pages')->latest()->paginate();
+        $mongas = Monga::with('pages')->latest('chapter')->paginate();
 
         return view('admin.monga', compact('mongas'));
     }
@@ -24,9 +24,25 @@ class MongaController extends Controller
         return view('admin.monga-edit', compact('monga', 'monga_pages'));
     }
 
+    public function update($id)
+    {
+        $monga = Monga::find($id);
+
+        $monga->update(request()->all());
+
+        return redirect()->to('admin/monga');
+    }
+
     public function create()
     {
         return view('admin.monga-create');
+    }
+
+    public function store()
+    {
+        Monga::create(array_merge(request()->all(), ['user_id' => auth()->user()->id]));
+
+        return redirect()->to('admin/monga');
     }
 
     public function destroy($id)

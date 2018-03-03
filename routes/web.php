@@ -12,5 +12,5 @@ Route::group([ 'prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admi
     Route::get('/', 'DashboardController@index');
     Route::resource('movie', 'MovieController');
     Route::resource('monga', 'MongaController');
-    // Route::resource('monga/{monga_id}/page', 'MongaPageController');
+    Route::resource('monga/{monga_id}/page', 'MongaPageController');
 });
